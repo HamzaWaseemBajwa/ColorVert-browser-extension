@@ -35,7 +35,7 @@ var lc1306 = jQuery.noConflict(true);
         );
 
         $("#btnsave").click(function () {
-            chrome.tabs.create({ url: chrome.runtime.getURL("login.html") });
+            chrome.tabs.create({ url: chrome.runtime.getURL("index.html") });
         });
 
     });

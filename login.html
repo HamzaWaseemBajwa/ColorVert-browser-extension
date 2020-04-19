@@ -4,6 +4,7 @@
 <head>
     <script src="jquery.min.js"></script>
     <script src='login.js'></script>
+    <script src='\database\routes\index.js'></script>
     <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 
@@ -11,20 +12,13 @@
     <button type="button" id="formButton">Toggle Form!</button>
 
     <form id="form1">
-        <b>First Name:</b> <input type="text" name="firstName">
+        <b>User Name:</b> <input type="text" id="username">
         <br><br>
-        <b>Last Name: </b><input type="text" name="lastName">
+        <b>Password: </b><input type="text" id="password">
         <br><br>
-        <b> Age:</b>
-        <br>
-        <input type="radio" name="age" value="adolescent"> 0 - 19 years
-        <br>
-        <input type="radio" name="age" value="mid"> 20 - 59 years
-        <br>
-        <input type="radio" name="age" value="senior"> 60 + years
         <br> <br>
         <b>Preferred Color:</b>
-        <select name="color">
+        <select name="color" id="colorChoice">
             <option value="blue">Blue</option>
             <option value="green">Green</option>
             <option value="yellow">Yellow</option>
