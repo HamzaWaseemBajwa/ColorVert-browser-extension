@@ -89,6 +89,10 @@ var lc1306 = jQuery.noConflict(true);
             collapsible: true,
             active: false
         });
+        
+        $("#btnsave").click(function () {
+            chrome.tabs.create({ url: chrome.runtime.getURL("index.html") });
+        });
 
 
     });
