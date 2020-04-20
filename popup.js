@@ -3,7 +3,7 @@ var lc1306 = jQuery.noConflict(true);
 (function ($) {
 
     $(function () {
-        chrome.storage.sync.get(["colorblindingValue","customFilterValues"], function (obj) {
+        chrome.storage.sync.get(["colorblindingValue", "customFilterValues"], function (obj) {
             var noValue = obj.colorblindingValue === null || obj.colorblindingValue === undefined;
             $("input[name=type][value=" + (noValue ? "deactive" : obj.colorblindingValue) + "]").prop('checked', true);
             if (obj.colorblindingValue !== 'deactivate' && !noValue) {
@@ -89,10 +89,14 @@ var lc1306 = jQuery.noConflict(true);
             collapsible: true,
             active: false
         });
-        
-        $("#btnsave").click(function () {
+
+        $("#btnLogin").click(function () {
             chrome.tabs.create({ url: chrome.runtime.getURL("index.html") });
         });
+
+        $("#btnRefresh").click(function () {
+            chrome.tabs.executeScript({ file: 'reload.js' });
+        })
 
 
     });
