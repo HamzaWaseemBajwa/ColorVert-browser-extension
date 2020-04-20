@@ -25,6 +25,7 @@
       "js": [
         "jquery.min.js",
         "colorblinding.js",
+        "background.js",
         "popup.js"
       ]
     }
