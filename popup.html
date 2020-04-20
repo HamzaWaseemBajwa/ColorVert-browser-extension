@@ -3,9 +3,11 @@
 
 <head>
         <title>Colorblinding - Accessibility Tool for Development</title>
-        <script src="jquery.min.js"></script>
-        <script src="popup.js"></script>
+        <link rel="stylesheet" href="jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="popup.css">
+        <script src="jquery-1.12.4.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script src="popup.js"></script>
 </head>
 
 <body>
@@ -40,12 +42,97 @@
                                 value="achromatomaly"><label for="achromatomaly">Blue Cone Monochromacy /
                                 Achromatomaly</label></div>
 
+                <div class="customSettings">
+                        <div class="label"><input class="inputRadio" type="radio" name="type" id="custom"
+                                        value="custom"><label for="custom">Custom</label></div>
+                        <div id="accordion" style="display:none">
+                                <h3>Red</h3>
+                                <div>
+                                        <div class="label">
+                                                <input name="r1" type="range" min="-1" max="1" value="1" step="0.01">
+                                                <label for="r1">Red</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="r2" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="r2">Green</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="r3" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="r3">Blue</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="r4" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="r4">Alpha</label>
+                                        </div>
+                                </div>
+                                <h3>Green</h3>
+                                <div>
+                                        <div class="label">
+                                                <input name="g1" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="g1">Red</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="g2" type="range" min="-1" max="1" value="1" step="0.01">
+                                                <label for="g2">Green</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="g3" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="g3">Blue</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="g4" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="g4">Alpha</label>
+                                        </div>
+                                </div>
+                                <h3>Blue</h3>
+                                <div>
+                                        <div class="label">
+                                                <input name="b1" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="b1">Red</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="b2" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="b2">Green</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="b3" type="range" min="-1" max="1" value="1" step="0.01">
+                                                <label for="b3">Blue</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="b4" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="b4">Alpha</label>
+                                        </div>
+                                </div>
+                                <!--
+                                <h3>Alpha</h3>
+                                <div>
+                                        <div class="label">
+                                                <input name="a1" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="a1">Red</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="a2" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="a2">Green</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="a3" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <label for="a3">Blue</label>
+                                        </div>
+                                        <div class="label">
+                                                <input name="a4" type="range" min="-1" max="1" value="1" step="0.01">
+                                                <label for="a4">Alpha</label>
+                                        </div>
+                                </div>
+                                -->
+                        </div>
+
+                </div>
                 <div class="label"><input class="inputRadio" type="radio" name="type" id="deactivate" value="deactivate"
                                 checked><label for="deactivate">Deactivate</label>
                 </div>
 
-                <input type="submit" id="btnsave" title="save" value="save" />
-                
+                <input type="submit" id="btnApply" title="Apply" value="Apply" />
+
         </form>
         <img src="bottom.png" class="bottom">
 </body>
