@@ -3,6 +3,7 @@
 
 <head>
         <title>Colorblinding - Accessibility Tool for Development</title>
+        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -14,36 +15,73 @@
 </head>
 
 <body>
+        <div id="bodyDiv">
         <form id="cvd_radios">
-                <div class="label"><input class="inputRadio" type="radio" name="type" id="normal" value="normal"><label
-                                for="normal">Normal Color Vision</label></div>
-
                 <div class="label"><input class="inputRadio" type="radio" name="type" id="protanopia"
-                                value="protanopia"><label for="protanopia">Red-Blind / Protanopia</label></div>
+                        value="protanopia"><label for="protanopia">Red-Blind / Protanopia</label>
+                        <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="RBSlider">
+                       <span id="RBCir"></span>
+                        </div>
+                       </div>
 
-                <div class="label"><input class="inputRadio" type="radio" name="type" id="deuteranopia"
-                                value="deuteranopia"><label for="deuteranopia">Green-Blind / Deuteranopia</label></div>
+       <div class="label"><input class="inputRadio" type="radio" name="type" id="deuteranopia"
+                       value="deuteranopia"><label for="deuteranopia">Green-Blind / Deuteranopia</label>
+                       <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="GBSlider">
+                       <span id="GBCir"></span>
+                        </div>
+                              </div>
 
-                <div class="label"><input class="inputRadio" type="radio" name="type" id="tritanopia"
-                                value="tritanopia"><label for="tritanopia">Blue-Blind / Tritanopia</label></div>
+       <div class="label"><input class="inputRadio" type="radio" name="type" id="tritanopia"
+                       value="tritanopia"><label for="tritanopia">Blue-Blind / Tritanopia</label>
+                      <div class="slidecontainer">
+                       <input type="range" min="0" max="100" value="0" class="slider" id="BBSlider">
+                       <span id="BBCir"></span>
+                       </div>
+       </div>
+               
 
-                <div class="label"><input class="inputRadio" type="radio" name="type" id="protanomaly"
-                                value="protanomaly"><label for="protanomaly">Red-Weak / Protanomaly</label></div>
+       <div class="label"><input class="inputRadio" type="radio" name="type" id="protanomaly"
+                       value="protanomaly"><label for="protanomaly">Red-Weak / Protanomaly</label>
+                       <div class="slidecontainer">
+                       <input type="range" min="0" max="100" value="0" class="slider" id="RWSlider">
+                       <span id="RWCir"></span>
+                       </div>
+       </div>
 
-                <div class="label"><input class="inputRadio" type="radio" name="type" id="deuteranomaly"
-                                value="deuteranomaly"><label for="deuteranomaly">Green-Weak / Deuteranomaly</label>
-                </div>
+       <div class="label"><input class="inputRadio" type="radio" name="type" id="deuteranomaly"
+                       value="deuteranomaly"><label for="deuteranomaly">Green-Weak / Deuteranomaly</label>
+                       <div class="slidecontainer">
+                       <input type="range" min="0" max="100" value="0" class="slider" id="GWSlider">
+                        <span id="GWCir"></span>
+                       </div>
+       </div>
 
-                <div class="label"><input class="inputRadio" type="radio" name="type" id="tritanomaly"
-                                value="tritanomaly"><label for="tritanomaly">Blue-Weak / Tritanomaly</label></div>
-
+       <div class="label"><input class="inputRadio" type="radio" name="type" id="tritanomaly"
+                       value="tritanomaly"><label for="tritanomaly">Blue-Weak / Tritanomaly</label>
+                       <div class="slidecontainer">
+                       <input type="range" min="0" max="100" value="0" class="slider" id="BWSlider">
+                       <span id="BWCir"></span>
+                       </div>
+       </div>
+      
                 <div class="label"><input class="inputRadio" type="radio" name="type" id="achromatopsia"
-                                value="achromatopsia"><label for="achromatopsia">Monochromacy / Achromatopsia</label>
+                                value="achromatopsia"><label for="achromatopsia">Monochromacy/Achromatopsia</label>
+                                <div class="slidecontainer">
+                                        <input type="range" min="0" max="100" value="0" class="slider" id="MonoSlider">
+                                        <span id="MonoCir"></span>
+                                        </div>
                 </div>
 
                 <div class="label"><input class="inputRadio" type="radio" name="type" id="achromatomaly"
                                 value="achromatomaly"><label for="achromatomaly">Blue Cone Monochromacy /
-                                Achromatomaly</label></div>
+                                Achromatomaly</label>
+                                <div class="slidecontainer">
+                                        <input type="range" min="0" max="100" value="0" class="slider" id="BCSlider">
+                                        <span id="BCCir"></span>
+                                        </div>
+                        </div>
 
                 <div class="customSettings">
                         <div class="label"><input class="inputRadio" type="radio" name="type" id="custom"
@@ -90,19 +128,19 @@
                                 <h3>Blue</h3>
                                 <div>
                                         <div class="label">
-                                                <input name="b1" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <input  class="slider" name="b1" type="range" min="-1" max="1" value="0" step="0.01">
                                                 <label for="b1">Red</label>
                                         </div>
                                         <div class="label">
-                                                <input name="b2" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <input  class="slider" name="b2" type="range" min="-1" max="1" value="0" step="0.01">
                                                 <label for="b2">Green</label>
                                         </div>
                                         <div class="label">
-                                                <input name="b3" type="range" min="-1" max="1" value="1" step="0.01">
+                                                <input  class="slider" name="b3" type="range" min="-1" max="1" value="1" step="0.01">
                                                 <label for="b3">Blue</label>
                                         </div>
                                         <div class="label">
-                                                <input name="b4" type="range" min="-1" max="1" value="0" step="0.01">
+                                                <input class="slider" name="b4" type="range" min="-1" max="1" value="0" step="0.01">
                                                 <label for="b4">Alpha</label>
                                         </div>
                                 </div>
@@ -134,12 +172,16 @@
                                 checked><label for="deactivate">Deactivate</label>
                 </div>
 
-                <input type="submit" id="btnRefresh" title="Refresh" value="Refresh" />
-                <input type="submit" id="btnApply" title="Apply" value="Apply" />
-                <input type="submit" id="btnLogin" title="Login" value="Login" />
+                <div id="ButtonsandPhotosDiv">
+                        <input type="submit" class="btn" id="btnRefresh" title="Refresh" value="Refresh" />
+                        <input type="submit" class="btn" id="btnApply" title="Apply" value="Apply" />
+                        <input type="submit" class="btn" id="btnLogin" title="Login" value="Login" />
+                        <img style="padding-top:0px;" src="ColorVert.png" class="bottom">
+                </div>
 
         </form>
-        <!-- <img src="bottom.png" class="bottom">-->
+       
+</div>
 </body>
 
 </html>
