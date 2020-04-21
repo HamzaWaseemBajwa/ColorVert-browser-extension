@@ -20,17 +20,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--//web-fonts-->
 </head>
 <body>
-	<h1>Test Authentication 🚀 </h1>
+	<h1>ColorVert</h1>
 	<!-- main -->
 	<div class="main">
 		<!--login-profile-->
-		
+
 		<!--login-profile-->
 		<!--signin-form-->
 		<div class="w3">
 			<div class="signin-form profile">
 				<h3>Login</h3>
-				
+
 				<div class="login-form">
 					<form action="/" method="post">
 						<input type="text" name="logemail" placeholder="E-mail" required="">
@@ -45,39 +45,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="agile">
 			<div class="signin-form profile">
 				<h3>Register</h3>
-				
+
 				<div class="login-form">
 					<form id="login" action="/" method="post" onsubmit="event.preventDefault(); validateMyForm();">
 						<input type="text" name="email" placeholder="E-mail" required="">
 						<input type="text" name="username" placeholder="Username" required="">
 						<input type="password" name="password" placeholder="Password" id="password" required="" >
-						<input type="password" name="passwordConf" placeholder="Confirm Password" id="password_conf" required="">
+						<input type="text" name="passwordConf" placeholder="Preferred Setting" id="password_conf" required="">
 						<input type="submit" value="REGISTER">
-                           <h2>Hoverable Dropdown</h2> <p>Move the mouse over the button to open the dropdown menu.</p>  <div class="dropdown">   <button class="dropbtn">Dropdown</button>   <div class="dropdown-content">     <a href="#">Link 1</a>     <a href="#">Link 2</a>     <a href="#">Link 3</a>   </div> </div>  
 					</form>
 				</div>
 				<p><a href="#"> By clicking register, I agree to your terms</a></p>
 			</div>
 		</div>
 		<div class="clear"></div>
-		<!--//signin-form-->	
+		<!--//signin-form-->
 	</div>
 	<div class="copyright">
 		<p> &copy; 2016 Register Login Widget . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank" >W3layouts</a></p>
-	</div>	
+	</div>
 
 	<script type="text/javascript">
 		var passWordField = document.getElementById('password')
 		var passWordConfirmField = document.getElementById('password_conf')
 		var form = document.getElementById('login')
 		function validateMyForm(){
-			if(passWordField.value != passWordConfirmField.value){ 
+			if(passWordField.value != passWordConfirmField.value){
 		    	alert("Passwords do not match. Please try again.");
 		  	} else {
 		  		form.submit()
 		  	}
 		}
-	</script>	
+	</script>
 
 </body>
 </html>
