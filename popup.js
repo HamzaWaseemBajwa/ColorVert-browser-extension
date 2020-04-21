@@ -99,6 +99,86 @@ var lc1306 = jQuery.noConflict(true);
         })
 
 
+          /* Js for slider Red-Blind / Protanopia */
+          var slider = document.getElementById("RBSlider");
+          var output = document.getElementById("RBCir");
+          output.innerHTML = slider.value;
+          
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+          }
+             /* Js for slider Green-Blind / Deuteranopia */
+             var slider2 = document.getElementById("GBSlider");
+             var output2 = document.getElementById("GBCir");
+             output2.innerHTML = slider.value;
+             
+             slider2.oninput = function() {
+               output2.innerHTML = this.value;
+             }
+                /* Js  slider for  Blue-Blind / Tritanopia */
+             var slider3= document.getElementById("BBSlider");
+             var output3= document.getElementById("BBCir");
+             output3.innerHTML = slider.value;
+             
+             slider3.oninput = function() {
+               output3.innerHTML = this.value;
+             }
+                 /* Js  slider for  Blue-Blind / Tritanopia */
+                 var slider3= document.getElementById("BBSlider");
+                 var output3= document.getElementById("BBCir");
+                 output3.innerHTML = slider.value;
+                 
+                 slider3.oninput = function() {
+                   output3.innerHTML = this.value;
+                 }
+  
+                /* Js  Red-Weak / Protanomaly 8 */
+                 var slider4= document.getElementById("RWSlider");
+                 var output4= document.getElementById("RWCir");
+                 output4.innerHTML = slider.value;
+                 
+                 slider4.oninput = function() {
+                   output4.innerHTML = this.value;
+                 }
+  
+          
+  
+               /* Js  slider for  Green-Weak / Deuteranomaly */
+             var slider5= document.getElementById("GWSlider");
+             var output5 = document.getElementById("GWCir");
+             output5.innerHTML = slider.value;
+             
+             slider5.oninput = function() {
+               output5.innerHTML = this.value;
+             }
+  
+              /* Js  slider for  Blue-Weak / Tritanomaly */
+              var slider6= document.getElementById("BWSlider");
+              var output6 = document.getElementById("BWCir");
+              output6.innerHTML = slider.value;
+              
+              slider6.oninput = function() {
+                output6.innerHTML = this.value;
+              }
+
+               /* Js  slider for  Monochromacy / Achromatopsia*/
+               var slider7= document.getElementById("MonoSlider");
+               var output7 = document.getElementById("MonoCir");
+               output7.innerHTML = slider.value;
+               
+               slider7.oninput = function() {
+                 output7.innerHTML = this.value;
+               }
+                /* Js  slider for Blue Cone Monochromacy / Achromatomaly */
+                var slider8= document.getElementById("BCSlider");
+                var output8 = document.getElementById("BCCir");
+                output8.innerHTML = slider.value;
+                
+                slider8.oninput = function() {
+                  output8.innerHTML = this.value;
+                }
     });
+
+    
 
 })(lc1306);

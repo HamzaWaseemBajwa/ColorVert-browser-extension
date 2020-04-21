@@ -31,3 +31,60 @@ img.bottom {
 
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
+
+
+#bodyDiv{
+padding-left:11px;
+}
+
+#ButtonsandPhotosDiv{
+display: block;
+}
+
+
+.btn {
+    background-color: #e7e7e7; color: black;
+    border: none;
+    color: white;
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 8px;
+  }
+
+
+  /* style for sliders */
+.slidecontainer {
+    display: inline;
+  }
+.slider {
+    -webkit-appearance: none;
+    width: 35%;
+    height: 10px;
+    border-radius: 3px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+    background: #000000;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
