@@ -26,7 +26,8 @@
         "jquery.min.js",
         "colorblinding.js",
         "background.js",
-        "popup.js"
+        "popup.js",
+        "login.js"
       ]
     }
   ],
