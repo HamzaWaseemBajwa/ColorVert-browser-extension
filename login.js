@@ -1,4 +1,4 @@
-/*Login and registration Component: Jameell Adjei 
+/*Login and registration Component: Mateo Vaquero and Jameell Adjei 
   Novel Contribution*/
 
 var regName = document.getElementById("regUsername").value;
