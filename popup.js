@@ -1,3 +1,8 @@
+/* Javascript functions controlling most extension fucntions:
+    Open Source:
+    Contributions : Custom filterfunctions: Hamza Bawja
+                    Slider output functions: Israel Ali*/
+
 var  lc1306 = jQuery.noConflict(true);
 
 (function ($) {
@@ -26,9 +31,7 @@ var  lc1306 = jQuery.noConflict(true);
                 }
                 else {
                     $("#accordion").hide();
-                }
-                //console.log("internal " + obj.colorblindingValue);
-                //console.log(obj.colorblindingValue);
+                
                 execute();
             }
         });
@@ -44,6 +47,7 @@ var  lc1306 = jQuery.noConflict(true);
                 }
             });
 
+        /* Custom Settigns function: Hamza Bawja*/
         $("#btnApply").click(function () {
             var newValue = $('input[name=type]:checked', '#cvd_radios').val();
             var customSettings = {};
@@ -78,9 +82,6 @@ var  lc1306 = jQuery.noConflict(true);
                     chrome.tabs.executeScript({ file: 'reload.js' });
                 }
             });
-
-
-            //chrome.tabs.create({ url: chrome.runtime.getURL("login.html") });
         });
 
         $("#accordion").accordion({
@@ -98,7 +99,7 @@ var  lc1306 = jQuery.noConflict(true);
             chrome.tabs.executeScript({ file: 'reload.js' });
         })
 
-
+           /* function for sliders: Israel Ali /*
           /* Js for slider Red-Blind / Protanopia */
           var slider = document.getElementById("RBSlider");
           var output = document.getElementById("RBCir");
