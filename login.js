@@ -1,3 +1,5 @@
+/*Login and registration Component: Jameell Adjei 
+  Novel Contribution*/
 
 var regName = document.getElementById("regUsername").value;
 var regPW = document.getElementById("regPassword").value;
