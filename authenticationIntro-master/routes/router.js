@@ -1,3 +1,6 @@
+
+/* Register and Login JavaScritp: Jameell Adjei and Mateo Vaquero */
+
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
@@ -5,13 +8,12 @@ var User = require('../models/user');
 
 // GET route for reading data
 router.get('/', function (req, res, next) {
-  return res.sendFile(path.join(__dirname + '/templateLogReg/index.html'));
+  return res.sendFile(path.join(__dirname + /login.html'));
 });
 
 
 //POST route for updating data
 router.post('/', function (req, res, next) {
-  // confirm that user typed same password twice
   if (req.body.password !== req.body.passwordConf) {
     var err = new Error('Passwords do not match.');
     err.status = 400;
@@ -57,7 +59,6 @@ router.post('/', function (req, res, next) {
   }
 })
 
-// GET route after registering
 router.get('/profile', function (req, res, next) {
   User.findById(req.session.userId)
     .exec(function (error, user) {
@@ -73,20 +74,6 @@ router.get('/profile', function (req, res, next) {
         }
       }
     });
-});
-
-// GET for logout logout
-router.get('/logout', function (req, res, next) {
-  if (req.session) {
-    // delete session object
-    req.session.destroy(function (err) {
-      if (err) {
-        return next(err);
-      } else {
-        return res.redirect('/');
-      }
-    });
-  }
 });
 
 module.exports = router;
