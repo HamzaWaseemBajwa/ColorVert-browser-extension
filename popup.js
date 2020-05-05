@@ -1,5 +1,5 @@
 /* Javascript functions controlling most extension fucntions:
-    Open Source:
+    Open Source:http://lab.leocardz.com/colorblinding
     Contributions : Custom filterfunctions: Hamza Bawja
                     Slider output functions: Israel Ali*/
 
