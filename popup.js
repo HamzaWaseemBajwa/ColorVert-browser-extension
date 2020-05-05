@@ -1,4 +1,4 @@
-var j = jQuery.noConflict(true);
+var  lc1306 = jQuery.noConflict(true);
 
 (function ($) {
 
