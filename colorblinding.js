@@ -148,8 +148,9 @@ function applyingStyle(document, css) {
 }
 
 /* Chrome storage: Israel Ali
-Open source: https://developer.chrome.com/extensions/storage
-Contributions: Added sync method*/
+Contributions: Added  customerFilterValues to sync method
+Open source:http://lab.leocardz.com/colorblinding
+Open source: https://developer.chrome.com/extensions/storage*/
 
 function execute() {
   chrome.storage.sync.get(
