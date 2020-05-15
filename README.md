@@ -2,7 +2,7 @@ ColorVert
 ==========
 
 
-An extension that to aid colorblind individuals in navigating the web. 
+An extension that aids colorblind individuals in navigating the web. 
 
 
 Options
